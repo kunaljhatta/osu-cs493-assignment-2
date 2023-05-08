@@ -6,6 +6,7 @@ exports.router = router;
 /*
  * Schema describing required/optional fields of a business object.
  */
+
 const businessSchema = {
   ownerid: { required: true },
   name: { required: true },
