@@ -1,0 +1,142 @@
+BUSINESSES TABLE
+----------------------------------------------------------------------------------
+CREATE TABLE businesses (
+  id mediumint NOT NULL AUTO_INCREMENT,
+  name varchar(255) NOT NULL,
+  address varchar(255) NOT NULL,
+  city varchar(255) NOT NULL,
+  state char(2) NOT NULL,
+  zip char(5) NOT NULL,
+  phone varchar(255) NOT NULL,
+  category varchar(255) NOT NULL,
+  subcategory varchar(255) NOT NULL,
+  website varchar(255) DEFAULT NULL,
+  email varchar(255) DEFAULT NULL,
+  ownerid mediumint DEFAULT NULL,
+  PRIMARY KEY (id)
+);
+
+INSERT INTO businesses (name, address, city, state, zip, phone, category, subcategory, website, email, ownerid)
+VALUES ('Papa John''s Pizza', '123 Main St', 'Chicago', 'IL', '60601', '312-555-1234', 'Food', 'Pizza', 'https://www.papajohns.com', 'info@papajohns.com', 1);
+
+INSERT INTO businesses (name, address, city, state, zip, phone, category, subcategory, website, email, ownerid)
+VALUES ('Starbucks', '456 Oak Ave', 'Seattle', 'WA', '98101', '206-555-5678', 'Food', 'Coffee', 'https://www.starbucks.com', 'info@starbucks.com', 2);
+
+INSERT INTO businesses (name, address, city, state, zip, phone, category, subcategory, website, email, ownerid)
+VALUES ('Amazon', '410 Terry Ave N', 'Seattle', 'WA', '98109', '206-555-7890', 'Retail', 'Online Retailer', 'https://www.amazon.com', 'info@amazon.com', 3);
+
+INSERT INTO businesses (name, address, city, state, zip, phone, category, subcategory, website, email, ownerid)
+VALUES ('Tesla', '45500 Fremont Blvd', 'Fremont', 'CA', '94538', '510-555-1234', 'Automotive', 'Electric Vehicles', 'https://www.tesla.com', 'info@tesla.com', 4);
+
+INSERT INTO businesses (name, address, city, state, zip, phone, category, subcategory, website, email, ownerid)
+VALUES ('Walmart', '702 SW 8th St', 'Bentonville', 'AR', '72716', '479-555-5678', 'Retail', 'Department Store', 'https://www.walmart.com', 'info@walmart.com', 5);
+
+INSERT INTO businesses (name, address, city, state, zip, phone, category, subcategory, website, email, ownerid)
+VALUES ('McDonald''s', '1 McDonald''s Plaza', 'Oak Brook', 'IL', '60523', '630-623-3000', 'Food', 'Fast Food', 'https://www.mcdonalds.com', 'info@mcdonalds.com', 6);
+
+INSERT INTO businesses (name, address, city, state, zip, phone, category, subcategory, website, email, ownerid)
+VALUES ('Gold''s Gym', '123 Main St', 'Venice', 'CA', '90291', '310-555-1234', 'Fitness', 'Gym', 'https://www.goldsgym.com', 'info@goldsgym.com', 7);
+
+INSERT INTO businesses (name, address, city, state, zip, phone, category, subcategory, website, email, ownerid)
+VALUES ('Apple', '1 Apple Park Way', 'Cupertino', 'CA', '95014', '408-555-5678', 'Technology', 'Consumer Electronics', 'https://www.apple.com', 'info@apple.com', 8);
+
+INSERT INTO businesses (name, address, city, state, zip, phone, category, subcategory, website, email, ownerid)
+VALUES ('Nike', '1 Bowerman Dr', 'Beaverton', 'OR', '97005', '503-555-1234', 'Retail', 'Athletic Apparel', 'https://www.nike.com', 'info@nike.com', 9);
+
+INSERT INTO businesses (name, address, city, state, zip, phone, category, subcategory, website, email, ownerid)
+VALUES ('Uber', '1455 Market St', 'San Francisco', 'CA', '94103', '800-555-5678', 'Transportation', 'Ride Sharing', 'https://www.uber.com', 'info@uber.com', 10);
+
++----+-------------------+--------------------+---------------+-------+-------+--------------+----------------+----------------------+---------------------------+--------------------+---------+
+| id | name              | address            | city          | state | zip   | phone        | category       | subcategory          | website                   | email              | ownerid |
++----+-------------------+--------------------+---------------+-------+-------+--------------+----------------+----------------------+---------------------------+--------------------+---------+
+|  1 | Papa John's Pizza | 123 Main St        | Chicago       | IL    | 60601 | 312-555-1234 | Food           | Pizza                | https://www.papajohns.com | info@papajohns.com |       1 |
+|  2 | Starbucks         | 456 Oak Ave        | Seattle       | WA    | 98101 | 206-555-5678 | Food           | Coffee               | https://www.starbucks.com | info@starbucks.com |       2 |
+|  3 | Amazon            | 410 Terry Ave N    | Seattle       | WA    | 98109 | 206-555-7890 | Retail         | Online Retailer      | https://www.amazon.com    | info@amazon.com    |       3 |
+|  4 | Tesla             | 45500 Fremont Blvd | Fremont       | CA    | 94538 | 510-555-1234 | Automotive     | Electric Vehicles    | https://www.tesla.com     | info@tesla.com     |       4 |
+|  5 | Walmart           | 702 SW 8th St      | Bentonville   | AR    | 72716 | 479-555-5678 | Retail         | Department Store     | https://www.walmart.com   | info@walmart.com   |       5 |
+|  6 | McDonald's        | 1 McDonald's Plaza | Oak Brook     | IL    | 60523 | 630-623-3000 | Food           | Fast Food            | https://www.mcdonalds.com | info@mcdonalds.com |       6 |
+|  7 | Gold's Gym        | 123 Main St        | Venice        | CA    | 90291 | 310-555-1234 | Fitness        | Gym                  | https://www.goldsgym.com  | info@goldsgym.com  |       7 |
+|  8 | Apple             | 1 Apple Park Way   | Cupertino     | CA    | 95014 | 408-555-5678 | Technology     | Consumer Electronics | https://www.apple.com     | info@apple.com     |       8 |
+|  9 | Nike              | 1 Bowerman Dr      | Beaverton     | OR    | 97005 | 503-555-1234 | Retail         | Athletic Apparel     | https://www.nike.com      | info@nike.com      |       9 |
+| 10 | Uber              | 1455 Market St     | San Francisco | CA    | 94103 | 800-555-5678 | Transportation | Ride Sharing         | https://www.uber.com      | info@uber.com      |      10 |
++----+-------------------+--------------------+---------------+-------+-------+--------------+----------------+----------------------+---------------------------+--------------------+---------+
+
+
+REVIEWS TABLE 
+-----------------------------------------------------------------------------------
+
+CREATE TABLE reviews (
+      id INT NOT NULL AUTO_INCREMENT,
+      userid INT NOT NULL,
+      businessid MEDIUMINT NOT NULL,
+      dollars INT NOT NULL,
+      stars INT NOT NULL,
+      review VARCHAR(255),
+      PRIMARY KEY (id),
+      FOREIGN KEY (businessid) REFERENCES businesses(id)
+  );
+
+INSERT INTO reviews (userid, businessid, dollars, stars, review)
+VALUES (1, 1, 20, 4, 'The food was delicious and the service was great.'),
+       (2, 2, 30, 5, 'This restaurant exceeded my expectations. Everything was perfect.'),
+       (3, 3, 25, 3, 'The food was average, but the ambiance was nice.'),
+       (4, 4, 15, 2, 'I was disappointed with the quality of the food and the service.'),
+       (5, 5, 40, 5, 'The best steak I have had in a long time. Highly recommend.'),
+       (6, 6, 20, 4, 'The staff was friendly and the food was good.'),
+       (7, 7, 35, 4, 'The seafood was fresh and delicious.'),
+       (8, 8, 50, 5, 'This restaurant is worth every penny. Amazing food and service.'),
+       (9, 9, 15, 1, 'Terrible experience. The food was cold and the service was slow.'),
+       (10, 10, 30, 3, 'The food was okay, but nothing special.');
+
+
++----+--------+------------+---------+-------+-------------------------------------------------------------------+
+| id | userid | businessid | dollars | stars | review                                                            |
++----+--------+------------+---------+-------+-------------------------------------------------------------------+
+|  1 |      1 |          1 |      20 |     4 | The food was delicious and the service was great.                 |
+|  2 |      2 |          2 |      30 |     5 | This restaurant exceeded my expectations. Everything was perfect. |
+|  3 |      3 |          3 |      25 |     3 | The food was average, but the ambiance was nice.                  |
+|  4 |      4 |          4 |      15 |     2 | I was disappointed with the quality of the food and the service.  |
+|  5 |      5 |          5 |      40 |     5 | The best steak I have had in a long time. Highly recommend.       |
+|  6 |      6 |          6 |      20 |     4 | The staff was friendly and the food was good.                     |
+|  7 |      7 |          7 |      35 |     4 | The seafood was fresh and delicious.                              |
+|  8 |      8 |          8 |      50 |     5 | This restaurant is worth every penny. Amazing food and service.   |
+|  9 |      9 |          9 |      15 |     1 | Terrible experience. The food was cold and the service was slow.  |
+| 10 |     10 |         10 |      30 |     3 | The food was okay, but nothing special.                           |
++----+--------+------------+---------+-------+-------------------------------------------------------------------+
+
+PHOTOS TABLE 
+------------------------------------------------------------------------------------------------------------------------
+CREATE TABLE photos (
+      id INT NOT NULL AUTO_INCREMENT,
+      userid INT NOT NULL,
+      businessid MEDIUMINT NOT NULL,
+      caption VARCHAR(255),
+      PRIMARY KEY (id),
+      FOREIGN KEY (businessid) REFERENCES businesses(id)
+);
+
+INSERT INTO photos (userid, businessid, caption) VALUES (1, 1, 'The best pizza in NYC!');
+INSERT INTO photos (userid, businessid, caption) VALUES (2, 2, 'The view from the rooftop bar is amazing!');
+INSERT INTO photos (userid, businessid, caption) VALUES (3, 3, 'The backyard is perfect for entertaining!');
+INSERT INTO photos (userid, businessid, caption) VALUES (3, 4, 'The kitchen has been recently renovated.');
+INSERT INTO photos (userid, businessid, caption) VALUES (4, 5, 'The perfect summer dress!');
+INSERT INTO photos (userid, businessid, caption) VALUES (5, 6, 'These shoes go with everything.');
+INSERT INTO photos (userid, businessid, caption) VALUES (9, 7, 'This painting is breathtaking!');
+INSERT INTO photos (userid, businessid, caption) VALUES (8, 8, 'The sculpture is so intricate.');
+INSERT INTO photos (userid, businessid, caption) VALUES (10, 9, 'Look at this cute puppy!');
+INSERT INTO photos (userid, businessid, caption) VALUES (1, 10, 'This cat is so cuddly.');
+
++----+--------+------------+-------------------------------------------+
+| id | userid | businessid | caption                                   |
++----+--------+------------+-------------------------------------------+
+|  1 |      1 |          1 | The best pizza in NYC!                    |
+|  2 |      2 |          2 | The view from the rooftop bar is amazing! |
+|  3 |      3 |          3 | The backyard is perfect for entertaining! |
+|  4 |      3 |          4 | The kitchen has been recently renovated.  |
+|  5 |      4 |          5 | The perfect summer dress!                 |
+|  6 |      5 |          6 | These shoes go with everything.           |
+|  7 |      9 |          7 | This painting is breathtaking!            |
+|  8 |      8 |          8 | The sculpture is so intricate.            |
+|  9 |     10 |          9 | Look at this cute puppy!                  |
+| 10 |      1 |         10 | This cat is so cuddly.                    |
++----+--------+------------+-------------------------------------------+
