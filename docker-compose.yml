@@ -5,9 +5,9 @@ services:
       context: .
       dockerfile: Dockerfile
     environment:
-      - MYSQL_DB=yelp
-      - MYSQL_USER=yelp
-      - MYSQL_PASSWORD=yelp
+      - MYSQL_DB=db
+      - MYSQL_USER=myuser
+      - MYSQL_PASSWORD=somepassword
     ports:
       - "8000:8000"
   db:
@@ -16,6 +16,6 @@ services:
       - "3306:3306"
     environment:
       - MYSQL_RANDOM_ROOT_PASSWORD=yes
-      - MYSQL_DATABASE=yelp
-      - MYSQL_USER=yelp
-      - MYSQL_PASSWORD=yelp
+      - MYSQL_DATABASE=db
+      - MYSQL_USER=user
+      - MYSQL_PASSWORD=somepassword
